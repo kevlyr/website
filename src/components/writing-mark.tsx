@@ -1,11 +1,11 @@
 export function WritingMark() {
   return (
     <figure
-      className="hidden min-h-[22rem] w-full items-center justify-center lg:flex"
+      className="hidden w-full max-w-sm justify-self-center lg:flex lg:-translate-y-4"
       aria-label="Decorative quill illustration"
     >
       <svg
-        className="h-auto w-full max-w-[27rem] text-accent opacity-85 drop-shadow-[0_24px_34px_rgb(75_49_28_/_0.14)] dark:opacity-90"
+        className="h-auto w-full max-w-[19rem] text-accent opacity-75 drop-shadow-[0_18px_28px_rgb(75_49_28_/_0.10)] dark:opacity-90"
         viewBox="0 0 340 220"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

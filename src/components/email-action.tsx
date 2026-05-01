@@ -26,7 +26,7 @@ export function EmailAction({
   const variantClass =
     variant === "primary"
       ? "border-accent bg-accent text-accent-foreground hover:bg-accent/90"
-      : "border-border bg-card/88 text-foreground hover:border-accent hover:text-accent";
+      : "border-border bg-card text-foreground hover:border-accent hover:text-accent";
 
   function openEmail() {
     window.location.href = `mailto:${getEmailAddress()}`;
@@ -39,7 +39,7 @@ export function EmailAction({
       className={
         isInline
           ? `focus-ring rounded-sm text-left transition hover:text-foreground ${className}`
-          : `focus-ring inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold shadow-soft transition hover:-translate-y-0.5 ${variantClass} ${className}`
+          : `focus-ring inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium shadow-sm transition hover:-translate-y-0.5 ${variantClass} ${className}`
       }
       aria-label="Send email"
     >

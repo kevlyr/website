@@ -63,7 +63,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="focus-ring inline-flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-soft transition hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+      className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-accent hover:text-accent"
       aria-label={`${themeLabels[theme]}. Switch to ${themeLabels[nextTheme].toLowerCase()}.`}
       title={`${themeLabels[theme]}: click for ${themeLabels[nextTheme].toLowerCase()}`}
     >

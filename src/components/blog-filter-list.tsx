@@ -29,8 +29,8 @@ export function BlogFilterList({ posts }: { posts: PostMeta[] }) {
               onClick={() => setActiveCategory(category)}
               className={`focus-ring rounded-full border px-3 py-1.5 text-sm transition hover:-translate-y-0.5 ${
                 isActive
-                  ? "border-accent bg-accent text-accent-foreground shadow-soft"
-                  : "border-border bg-card/88 text-foreground shadow-sm hover:border-accent hover:text-accent"
+                  ? "border-accent bg-accent text-accent-foreground"
+                  : "border-border bg-card text-muted hover:border-accent hover:text-accent"
               }`}
               aria-pressed={isActive}
             >

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Sprout } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/lib/site";
 
@@ -17,14 +16,13 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-20 -mx-4 border-b border-border/70 bg-card/88 px-4 py-4 shadow-[0_8px_26px_rgb(75_49_28_/_0.06)] backdrop-blur sm:-mx-6 sm:px-6 lg:-mx-10 lg:px-10">
+    <header className="sticky top-0 z-20 border-b border-border/70 bg-background/85 py-4 backdrop-blur">
       <nav className="flex items-center justify-between gap-4" aria-label="Main navigation">
-        <Link className="focus-ring inline-flex shrink-0 items-center gap-2 rounded-sm font-serif text-2xl font-semibold leading-none" href="/">
-          <Sprout size={24} strokeWidth={1.4} className="text-accent" aria-hidden />
+        <Link className="focus-ring rounded-sm font-semibold" href="/">
           {siteConfig.name}
         </Link>
-        <div className="flex items-center gap-2 sm:gap-5">
-          <div className="flex max-w-[calc(100vw-12rem)] items-center gap-1 overflow-x-auto sm:max-w-none sm:gap-2">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center rounded-full border border-border bg-card/70 p-1 shadow-sm">
             {navItems.map((item) => {
               const isActive =
                 pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
@@ -33,10 +31,10 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`focus-ring shrink-0 rounded-full px-3 py-2 text-xs font-semibold transition sm:px-5 sm:py-3 sm:text-sm ${
+                  className={`focus-ring rounded-full px-3 py-1.5 text-sm transition ${
                     isActive
-                      ? "bg-accent text-accent-foreground shadow-soft"
-                      : "text-foreground hover:bg-card hover:text-accent"
+                      ? "bg-accent text-accent-foreground"
+                      : "text-muted hover:text-foreground"
                   }`}
                 >
                   {item.label}

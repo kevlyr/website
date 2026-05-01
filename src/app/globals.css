@@ -8,8 +8,8 @@
   --color-card: 255 251 243;
   --color-border: 219 205 185;
   --color-muted: 112 96 78;
-  --color-accent: 60 124 83;
-  --color-accent-foreground: 248 255 249;
+  --color-accent: 144 84 48;
+  --color-accent-foreground: 255 248 235;
   --font-sans: "Inter", "Avenir Next", "Segoe UI", sans-serif;
   --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
 }
@@ -20,8 +20,8 @@
   --color-card: 42 40 35;
   --color-border: 86 78 66;
   --color-muted: 190 176 153;
-  --color-accent: 128 196 145;
-  --color-accent-foreground: 17 41 28;
+  --color-accent: 218 154 103;
+  --color-accent-foreground: 38 28 20;
 }
 
 * {
@@ -44,7 +44,7 @@ body {
 
 .dark body {
   background:
-    radial-gradient(circle at top left, rgb(46 91 62 / 0.24), transparent 32rem),
+    radial-gradient(circle at top left, rgb(88 70 48 / 0.22), transparent 32rem),
     linear-gradient(135deg, rgb(var(--color-background)), rgb(25 24 21));
 }
 
