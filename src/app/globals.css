@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: 250 245 236;
+  --color-foreground: 43 35 27;
+  --color-card: 255 251 243;
+  --color-border: 219 205 185;
+  --color-muted: 112 96 78;
+  --color-accent: 60 124 83;
+  --color-accent-foreground: 248 255 249;
+  --font-sans: "Inter", "Avenir Next", "Segoe UI", sans-serif;
+  --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+}
+
+.dark {
+  --color-background: 30 29 25;
+  --color-foreground: 244 235 218;
+  --color-card: 42 40 35;
+  --color-border: 86 78 66;
+  --color-muted: 190 176 153;
+  --color-accent: 128 196 145;
+  --color-accent-foreground: 17 41 28;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgb(255 255 255 / 0.72), transparent 32rem),
+    linear-gradient(135deg, rgb(var(--color-background)), rgb(var(--color-background)));
+  color: rgb(var(--color-foreground));
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+}
+
+.dark body {
+  background:
+    radial-gradient(circle at top left, rgb(46 91 62 / 0.24), transparent 32rem),
+    linear-gradient(135deg, rgb(var(--color-background)), rgb(25 24 21));
+}
+
+::selection {
+  background: rgb(var(--color-accent) / 0.22);
+}
+
+.focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent;
+}
+
+.article-content {
+  @apply prose prose-stone max-w-none dark:prose-invert prose-headings:font-serif prose-headings:font-normal prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-p:leading-8 prose-li:leading-8;
+}
