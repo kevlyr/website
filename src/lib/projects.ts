@@ -2,34 +2,39 @@ export type Project = {
   title: string;
   description: string;
   tech: string[];
-  repoUrl: string;
-  liveUrl: string;
+  href: string;
+  hrefLabel?: string;
+  repoUrl?: string;
+  liveUrl?: string;
   icon: "sprout" | "pen" | "sparkle";
 };
 
 export const projects: Project[] = [
   {
-    title: "seeg",
-    description: "A gentle iOS app for tracking daily habits and progress without turning self-improvement into homework.",
-    tech: ["Swift", "SwiftUI"],
-    repoUrl: "https://github.com/",
-    liveUrl: "https://example.com/",
+    title: "Curriculum Cross Modal Transfer Learning for Imagined-Speech Reconstruction from sEEG",
+    description: "A new approach to imagined speech to text reconstruction.",
+    tech: ["pyTorch"],
+    href: "/VocalMindPaper.pdf",
+    hrefLabel: "View paper",
+    repoUrl: "https://github.com/kevlyr/mind2words",
     icon: "sprout"
   },
   {
-    title: "TabAnywhere",
+    title: "TypeFlow",
     description: "A minimal writing app for drafting essays, notes, and tiny scenes across macOS and iPad.",
     tech: ["Swift", "AppKit"],
-    repoUrl: "https://github.com/",
-    liveUrl: "https://example.com/",
+    href: "https://github.com/kevlyr/TypeFlow",
+    hrefLabel: "View project",
+    repoUrl: "https://github.com/kevlyr/TypeFlow",
     icon: "pen"
   },
   {
-    title: "Promptopia",
-    description: "An AI prompt manager for saving, tagging, and iterating on creative and technical prompts.",
+    title: "Website",
+    description: "This website.",
     tech: ["Next.js", "Tailwind"],
-    repoUrl: "https://github.com/",
-    liveUrl: "https://example.com/",
+    href: "https://kevlyr.ink",
+    hrefLabel: "Visit site",
+    repoUrl: "https://github.com/kevlyr/website",
     icon: "sparkle"
   }
 ];

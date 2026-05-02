@@ -4,6 +4,7 @@ import { FeaturedCard } from "@/components/featured-card";
 import { ProfileAvatar } from "@/components/profile-avatar";
 import { ProfileLinks } from "@/components/profile-links";
 import { WritingMark } from "@/components/writing-mark";
+import { featuredConfig } from "@/lib/featured";
 import { formatDate } from "@/lib/format";
 import { getAllPosts } from "@/lib/posts";
 import { projects } from "@/lib/projects";
@@ -20,33 +21,36 @@ type FeaturedItem = {
 
 export default async function HomePage() {
   const posts = await getAllPosts();
-  const featuredPosts = posts.slice(0, 3);
-  const featuredProjects = projects.slice(0, 3);
-  const featuredItems: FeaturedItem[] = featuredPosts.flatMap((post, index) => {
-    const project = featuredProjects[index];
-    const items: FeaturedItem[] = [
-      {
+  const featuredItems: FeaturedItem[] = featuredConfig.map((item) => {
+    if (item.type === "post") {
+      const post = posts.find((candidate) => candidate.slug === item.slug);
+      if (!post) {
+        throw new Error(`Featured post not found: ${item.slug}`);
+      }
+
+      return {
         eyebrow: post.category,
         title: post.title,
         description: post.excerpt,
         href: `/blog/${post.slug}`,
         meta: `${formatDate(post.date)} · ${post.readingTime}`,
         tags: post.tags
-      }
-    ];
-
-    if (project) {
-      items.push({
-        eyebrow: "Project",
-        title: project.title,
-        description: project.description,
-        href: "/projects",
-        meta: project.tech.join(" · "),
-        tags: project.tech
-      });
+      };
     }
 
-    return items;
+    const project = projects.find((candidate) => candidate.title === item.title);
+    if (!project) {
+      throw new Error(`Featured project not found: ${item.title}`);
+    }
+
+    return {
+      eyebrow: "Project",
+      title: project.title,
+      description: project.description,
+      href: project.href,
+      meta: project.tech.join(" · "),
+      tags: project.tech
+    };
   });
 
   return (
