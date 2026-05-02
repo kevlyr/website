@@ -6,6 +6,7 @@ excerpt: "Never done something like this before"
 tags:
   - Short Story
 ---
+
 My old life ended when I greeted him with a smile just like any other day, puckering my lips only to kiss dry air as he walked right past. I asked what was wrong, and he told me to sit down, so I sat, and in an almost fever dream trance I watched him slide the papers across the table, stark white, colder than snow, and he buried his face in his hands and I heard a muffled sob.
 
 My old life began with an almost-perfect house at the end of a sleepy cul-de-sac. I remembered a living room full of oversized sofas, perfect for parties and messiness. The problem was that the yard was small. He told me that the yard didn’t matter and that we would be happy. 

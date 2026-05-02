@@ -21,7 +21,7 @@ export const projects: Project[] = [
   },
   {
     title: "TypeFlow",
-    description: "A minimal writing app for drafting essays, notes, and tiny scenes across macOS and iPad.",
+    description: "Like Copilot tab-complete, but everywhere on iOS!",
     tech: ["Swift", "AppKit"],
     href: "https://github.com/kevlyr/TypeFlow",
     hrefLabel: "View project",
